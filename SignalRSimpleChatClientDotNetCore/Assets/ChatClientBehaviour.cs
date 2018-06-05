@@ -25,7 +25,7 @@ public class ChatClientBehaviour : MonoBehaviour
 
         if (string.IsNullOrEmpty(SignalRServer) )
         {
-            SignalRServer = "http://localhost:14883/chatHub";
+            SignalRServer = "http://signalrsimplechatserverdotnetcore.azurewebsites.net/chatHub";
             QueueTextChange($"No connection specified. Defaulting to {SignalRServer}");
         }
 
