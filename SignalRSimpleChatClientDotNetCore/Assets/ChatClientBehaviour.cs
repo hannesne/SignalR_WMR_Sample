@@ -72,7 +72,7 @@ public class ChatClientBehaviour : MonoBehaviour
         QueueTextChange("Initiating connection");
         connection = new HubConnectionBuilder()
             .WithUrl(SignalRServer)
-            //.ConfigureLogging(logging => logging.AddProvider(new MyConsoleWriter()))
+            .ConfigureLogging(logging => logging.AddProvider(new MyConsoleWriter()))
             .Build();
         connection.On<string, string>("ReceiveMessage", ReceiveMessage);
         try
